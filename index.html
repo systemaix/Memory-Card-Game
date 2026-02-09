@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Memory Match</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<div class="game-wrapper">
+  <header>
+    <h1>MEMORY <span>MATCH</span></h1>
+    <div class="stats-bar">
+      <div class="stat">
+        <i class="fas fa-mouse-pointer"></i> <span id="moves">0</span>
+      </div>
+      <div class="stat">
+        <i class="fas fa-clock"></i> <span id="time">00:00</span>
+      </div>
+      <button onclick="restartGame()" class="reset-btn"><i class="fas fa-redo"></i></button>
+    </div>
+  </header>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="overlay hidden" id="win-overlay">
+    <div class="modal">
+      <h2>🎉 VICTORY!</h2>
+      <div class="final-stats">
+        <p>Moves: <strong id="final-moves">0</strong></p>
+        <p>Time: <strong id="final-time">00:00</strong></p>
+      </div>
+      <button onclick="restartGame()">PLAY AGAIN</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
